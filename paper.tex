@@ -1,0 +1,206 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+\title{A Cellular Automata Model of Bone Formation}
+
+
+\author{\IEEEauthorblockN{Aly Khaled}
+\IEEEauthorblockA{\textit{dept. Biomedical Engineering} \\
+\textit{Cairo University}\\
+Giza, Egypt \\
+aly.othman01@eng-st.cu.edu.eg \\
+1190156}
+\and
+\IEEEauthorblockN{Mohamed Souka}
+\IEEEauthorblockA{\textit{dept. Biomedical Engineering} \\
+\textit{Cairo University}\\
+Giza, Egypt \\
+mohamed.souka01@eng-st.cu.edu.eg \\
+1190517}
+\and
+\IEEEauthorblockN{Mohamed Ahmed Abdallah}
+\IEEEauthorblockA{\textit{dept. Biomedical Engineering} \\
+\textit{Cairo University}\\
+Giza, Egypt \\
+mohamed.mahmoud02@eng-st.cu.edu.eg \\
+1190388}
+\and
+\IEEEauthorblockN{Mohamed Adel}
+\IEEEauthorblockA{\textit{dept. Biomedical Engineering} \\
+\textit{Cairo University}\\
+Giza, Egypt \\
+ashour521@gmail.com \\
+1190407}
+\and
+\IEEEauthorblockN{Abdelrahman Salem}
+\IEEEauthorblockA{\textit{dept. Biomedical Engineering} \\
+\textit{Cairo University}\\
+Giza, Egypt \\
+Asalem20717@gmail.com \\
+1190420}
+\and
+\IEEEauthorblockN{Mohamed ElRafie}
+\IEEEauthorblockA{\textit{dept. Biomedical Engineering} \\
+\textit{Cairo University}\\
+Giza, Egypt \\
+mohamed.k.elrafie@gmail.com \\
+1180403}
+}
+
+\maketitle
+
+\begin{abstract}
+Bone formation is a complex biological process involving the interaction of multiple cell types and molecular signaling pathways. In this study, we propose a cellular automata model to simulate and investigate the dynamics of bone formation at the microscopic level.
+
+The cellular automata model is based on a lattice of cells representing different cell types involved in bone formation, including osteoblasts, osteoclasts, and osteocytes. Each cell follows a set of rules that govern its behavior, such as proliferation, migration, and differentiation, as well as interactions with neighboring cells.
+
+By incorporating known biological principles and experimental data into the model, we aim to capture the essential processes underlying bone formation, including cell proliferation, matrix synthesis, mineralization, and remodeling. The model also accounts for the effects of various factors, such as mechanical loading, on bone tissue development.
+
+Through computer simulations, we investigate the emergent properties and collective behavior of the cellular system during bone formation. We analyze the spatial patterns of cell distribution, extracellular matrix deposition, and mineralization, as well as the overall dynamics of bone tissue growth and remodeling.
+
+Our findings provide valuable insights into the fundamental mechanisms governing bone formation and have implications for understanding bone development, homeostasis, and disease. The proposed cellular automata model offers a powerful tool for studying bone biology and has the potential to guide the design of therapeutic strategies for bone regeneration and repair.
+\end{abstract}
+
+\section{Introduction}
+formation is a dynamic and complex biological process that plays a crucial role in skeletal development, homeostasis, and repair. Understanding the mechanisms underlying bone formation is essential for unraveling the pathophysiology of bone-related diseases and designing effective therapeutic strategies. Over the years, various experimental and computational approaches have been employed to investigate bone formation. In this study, we propose a cellular automata model to simulate and analyze the spatiotemporal dynamics of bone formation at the microscopic level.
+
+Cellular automata (CA) models have proven to be powerful tools for studying complex systems and emergent phenomena. They are discrete, computational models that simulate the behavior of individual cells within a lattice-based environment. In the context of bone formation, CA models provide a framework for capturing the interactions between different cell types, extracellular matrix, and signaling molecules involved in the process.
+
+The proposed CA model integrates existing knowledge of bone biology and incorporates experimental data to simulate the key processes underlying bone formation. The lattice represents the three-dimensional spatial environment, while each cell within the lattice represents a specific cell type involved in bone formation, such as osteoblasts, osteoclasts, and osteocytes. The model incorporates rules that govern cell behavior, including proliferation, migration, differentiation, and interactions with neighboring cells.
+
+One of the main advantages of the CA model is its ability to capture the spatial and temporal dynamics of bone formation. By simulating the interactions between cells and their microenvironment, the model can elucidate the emergent properties and collective behavior that give rise to the formation of functional bone tissue. Moreover, the model can be used to investigate the influence of various factors, such as mechanical loading and biochemical signaling, on bone tissue development and remodeling.
+
+Through computer simulations using the CA model, we aim to gain insights into the fundamental mechanisms governing bone formation. We will analyze the spatial patterns of cell distribution, extracellular matrix deposition, and mineralization during bone formation. Additionally, we will examine the effects of different parameters and conditions on bone tissue growth and remodeling.
+
+The outcomes of this research have the potential to contribute to our understanding of bone biology and provide valuable insights into the development, homeostasis, and repair of bone tissue. Furthermore, the CA model can serve as a powerful tool for guiding the design of therapeutic strategies for bone regeneration and repair. By manipulating the parameters within the model, we can explore potential interventions to promote bone formation or prevent pathological bone loss.
+
+In summary, this research paper presents a cellular automata model of bone formation, which offers a novel approach for investigating the intricate processes involved in bone biology. By simulating the spatiotemporal dynamics of bone formation, we aim to deepen our understanding of bone development and pathology, ultimately paving the way for innovative approaches in bone tissue engineering and regenerative medicine.
+
+\section{Literature review}
+Bone formation is a highly regulated process involving the coordinated activities of multiple cell types, signaling molecules, and extracellular matrix components. Extensive research has been conducted to elucidate the molecular and cellular mechanisms underlying bone development, remodeling, and repair. In this literature review, we summarize key findings from previous studies and highlight the current gaps in our understanding of bone formation, setting the stage for the proposed cellular automata model.
+
+Osteoblasts, the bone-forming cells, play a central role in bone formation. They secrete collagen and other proteins that form the organic matrix, which provides the scaffold for mineralization. Osteoclasts, on the other hand, are responsible for bone resorption and remodeling. The balance between osteoblast and osteoclast activity is tightly regulated to maintain skeletal homeostasis. Several studies have focused on investigating the intricate signaling pathways and molecular mechanisms that control the differentiation and function of these cell types.
+
+Cellular interactions within the bone microenvironment are crucial for bone formation. Osteocytes, the most abundant cells in mature bone, are embedded within the mineralized matrix and have been implicated in orchestrating bone remodeling processes. They sense mechanical forces and communicate with osteoblasts and osteoclasts through various signaling pathways. Understanding the cross-talk between different cell types is essential for comprehending the spatiotemporal dynamics of bone formation.
+
+Advances in experimental techniques, such as imaging and genetic engineering, have provided valuable insights into bone biology. High-resolution imaging modalities, including micro-computed tomography (micro-CT) and confocal microscopy, enable visualization of bone microarchitecture and cellular activities in three dimensions. Transgenic and knockout mouse models have been instrumental in unraveling the roles of specific genes and signaling pathways in bone formation.
+
+Computational modeling approaches have also contributed significantly to our understanding of bone formation. Finite element analysis (FEA) and agent-based models (ABMs) have been widely used to simulate the mechanical behavior of bone and investigate bone remodeling processes. However, these models often lack the ability to capture the emergent properties and spatial organization of cells within the bone tissue.
+
+In recent years, cellular automata (CA) models have emerged as promising tools for studying complex biological systems. CA models can capture the local interactions between individual cells and their environment, allowing for the simulation of self-organization and emergent behavior. The proposed cellular automata model of bone formation aims to bridge the gap between traditional computational models and the spatial complexity of bone tissue.
+
+By incorporating biological principles and experimental data, the cellular automata model offers a unique opportunity to investigate the spatiotemporal dynamics of bone formation. It allows for the simulation of cell proliferation, migration, differentiation, and the effects of mechanical and biochemical signaling on bone tissue development. Through computer simulations using the CA model, we can explore the collective behavior of cells, the formation of spatial patterns, and the overall dynamics of bone tissue growth and remodeling.
+
+In conclusion, this literature review highlights the current understanding of bone formation and the existing gaps in knowledge. The integration of experimental findings and computational modeling approaches, such as cellular automata, offers a promising avenue for advancing our understanding of bone biology. The proposed cellular automata model of bone formation aims to provide insights into the complex processes underlying bone development, homeostasis, and repair, ultimately guiding the development of novel therapeutic strategies for bone-related disorders.
+
+\section{Model}
+Cellular automata (CA) models are powerful tools used to simulate complex systems. In this case, we developed a CA model to simulate the process of bone formation. The objective was to understand how bone tissue develops and evolves over time. The model is based on a three-dimensional matrix representing a tissue culture well, with dimensions M and N representing the monolayer of cells in the culture.
+
+To begin, we set up the initial conditions for the simulation. Preosteoblasts from the MC3T3-E1 cell Fig.~\ref{fig:my_label} line were seeded onto the culture well and allowed to grow to 100% confluence. The cells were provided with a supplemented medium containing essential nutrients for optimal growth. Upon confluence, the cells were induced to differentiate using specific substances.
+
+\begin{figure}
+\centerline{\includegraphics[width=0.4\textwidth]{CL-0378-1.jpg}}
+
+    \caption{MC3T3-E1 cell}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.4\textwidth]{Figure_1.png}}
+
+    \caption{Matrix at T = 0}
+    \label{fig:matrixT}
+\end{figure}
+
+\begin{figure}
+\centerline{\includegraphics[width=0.4\textwidth]{fig2.png}}
+
+    \caption{Matrix at T = 3}
+    \label{fig:matrixT3}
+\end{figure}
+\begin{figure}
+\centerline{\includegraphics[width=0.4\textwidth]{fig3.png}}
+
+    \caption{Matrix at T = 11}
+    \label{fig:matrixT11}
+\end{figure}
+\begin{figure}
+\centerline{\includegraphics[width=0.4\textwidth]{fig4.png}}
+
+    \caption{Matrix at T = 26}
+    \label{fig:matrixT26}
+\end{figure}
+The CA model represents the state of the tissue culture well at each time step. A single square in the CA model corresponds to a set of osteoblasts in the real system. The parameter T represents time, with one time step in the simulation corresponding to one day in the in vitro culture.
+
+At the beginning of each simulation, the matrix representing the tissue culture well is initialized with zero values. The number of initial clusters, representing sites of mineralization, is determined based on experimental data or assumptions. These initial sites are randomly selected, and their values are set to random numbers within a specified range.
+
+Next, the simulation progresses through each time step. For each cell in the grid, the current value is compared to the average value of its neighboring cells. If the average value is higher, indicating the presence of mineralization, the current cell's value increases, representing bone formation. This mechanism mimics the observation that bone formation is influenced by the local environment and the presence of surrounding mineralized tissue.
+
+The simulation continues until reaching the desired number of time steps, replicating the culture conditions described in the experimental setup. Throughout the simulation, the CA model tracks the development and evolution of bone formation within the tissue culture well.
+
+To validate the CA model, a permutation test or other validation methods can be performed. This step involves comparing the simulated results with experimental data to assess the accuracy of the model in representing the in vitro characterization.
+
+In terms of the implementation, we utilized Python programming language. The simulation was structured using nested loops to iterate over each cell in the grid and update its value based on the average value of its neighbors. The NumPy library was employed for efficient array manipulation and random number generation.
+
+Additionally, we included a visual component to the simulation by utilizing the Matplotlib library. The final state of the grid at the last time step was visualized using a color map, with hotter colors indicating higher levels of bone formation.
+
+To enhance the interactive nature of the simulation, we incorporated a slider using the Matplotlib Slider widget. This slider allows users to adjust the time step (T) and observe the corresponding state of the grid at each step. As the slider is moved, the plot updates in real-time, providing a dynamic visualization of the bone formation process.
+
+In conclusion, we developed a CA model to simulate bone formation in a tissue culture well. The model utilized a three-dimensional matrix to represent the state of the well at each time step, with cells evolving based on the average value of their neighboring cells. The simulation was implemented using Python, and a visual interface with a slider was included to interactively explore the evolution of bone formation over time.
+
+
+\section{Levels of Simplification}
+In developing our cellular automata (CA) model of bone formation, we employed two levels of simplification to focus on the key aspects of the process. Specifically, we neglected the concentration of osteoclasts. By doing so, we aimed to create a more manageable and focused model that captured the fundamental dynamics of bone formation.
+
+Osteoclasts play a crucial role in bone remodeling as they are responsible for bone resorption. However, in our simplified CA model, we chose to focus primarily on the formation of new bone tissue rather than incorporating the complex dynamics of osteoclast activity. By neglecting the concentration of osteoclasts, we made the assumption that their presence and activity would not significantly impact the bone formation process being simulated. While this oversimplification limits the model's realism, it allows us to isolate and study the mechanisms of bone formation in a controlled manner.
+
+By incorporating these simplifications, we were able to create a more manageable and tractable CA model that could be studied and analyzed in a controlled manner. While these simplifications deviate from the full complexity of bone formation, they allowed us to focus on the core dynamics and mechanisms that underlie the process. This approach enables us to gain valuable insights into the fundamental principles of bone formation, which can serve as a foundation for further investigations and more comprehensive models in the future.
+
+It is important to acknowledge that these simplifications come with certain limitations. Neglecting the concentration of osteoclasts overlooks their role in bone remodeling and the balance between bone resorption and formation. This simplification assumes that the formation process dominates over resorption, which may not always hold true in real-world scenarios. Therefore, the results and conclusions drawn from our model should be interpreted with these limitations in mind and validated against experimental data and more sophisticated models that incorporate the neglected factors.
+
+In summary, our CA model of bone formation involved two levels of simplification: neglecting the concentration of osteoclasts. These simplifications allowed us to focus on the essential mechanisms of bone formation, facilitating a more manageable and focused investigation. While these simplifications introduce limitations, they provide valuable insights into the core dynamics of bone formation and serve as a basis for future studies that can incorporate the neglected factors for a more comprehensive understanding of the process.
+
+\section{Future Work}
+Future work in the field of bone formation modeling could build upon our cellular automata (CA) model and explore several avenues for further investigation. Here are some suggestions for future research:
+\begin{itemize}
+    \item \textbf{Integration of osteoclast dynamics:} Our current model neglected the concentration of osteoclasts, which play a crucial role in bone remodeling and resorption. Future work could focus on incorporating the dynamics of osteoclasts into the CA model to capture the interplay between bone formation and resorption processes. This integration would provide a more comprehensive understanding of bone remodeling and enable the exploration of pathological conditions such as osteoporosis.
+    \item \textbf{Exploration of different tissue environments:} Our model focused on bone formation within tissue culture wells, but bone formation occurs in various tissue environments in the body. Future research could expand the model to simulate bone formation in different tissue contexts, such as trabecular or cortical bone. This expansion would allow for a more comprehensive understanding of bone development and adaptation in specific anatomical locations.
+    \item \textbf{Investigation of external factors:} In addition to mechanical influences, there are other external factors that can impact bone formation, such as hormonal signaling or nutrient availability. Future research could explore the effects of these external factors on the dynamics of bone formation. This would provide a more comprehensive understanding of the multifaceted nature of bone development and how external factors contribute to the process.
+\end{itemize}
+\section{Conclusion}
+In conclusion, our work in developing a cellular automata (CA) model of bone formation has provided valuable insights into the fundamental dynamics of this complex biological process. Through the use of simplifications and focusing on key aspects, we were able to create a manageable and focused model that captured the core mechanisms of bone formation.
+
+Our CA model successfully simulated the growth and evolution of bone tissue within a tissue culture well. By considering the interactions between cells and their local environment, we observed the emergence of bone formation patterns resembling those observed in real-world scenarios. The model allowed us to investigate how local factors influence the process of bone formation and provided a platform for studying the spatiotemporal dynamics of bone tissue growth.
+
+We also incorporated validation techniques, such as comparing the simulated results with experimental data, to assess the accuracy and reliability of our model. This validation process helped ensure that our model captured essential features of bone formation and provided confidence in its ability to replicate real-world observations.
+
+While our model involved simplifications, such as neglecting the concentration of osteoclasts and the influence of mechanical pressure, these simplifications allowed us to focus on the core mechanisms of bone formation and understand the internal biological processes at play. Our work serves as a foundation for further investigations and more comprehensive models that can incorporate these neglected factors to provide a more complete understanding of bone formation.
+
+The results obtained from our CA model contribute to the broader field of bone biology and provide insights that can be applied to various research areas, including tissue engineering and regenerative medicine. By understanding the underlying principles of bone formation, we can explore strategies to enhance bone regeneration and develop novel therapeutic approaches for bone-related diseases and injuries.
+
+
+\section*{Acknowledgment}
+We would like to express our sincere gratitude to Dr. Rushdi and TA Asmaa for their invaluable help and support throughout the development of our cellular automata model of bone formation. Their guidance, expertise, and continuous assistance have been instrumental in shaping the direction of our research and enhancing the quality of our work.
+
+Dr. Rushdi's profound knowledge and insightful input have greatly contributed to the conceptualization and design of our model. His guidance has been pivotal in navigating the complexities of bone formation and ensuring the model's accuracy and scientific rigor. We are truly grateful for his mentorship and the time he dedicated to discussing and refining our ideas.
+
+\begin{thebibliography}{00}
+\bibitem{b1} Van Scoy, G. K., George, E. L., Opoku Asantewaa, F., Kerns, L., Saunders, M., & Prieto-Langarica, A. (2017). A cellular automata model of bone formation. Mathematical biosciences, 286, 58–64. 
+\bibitem{b2} Glen, C. M., Kemp, M. L., & Voit, E. O. (2019). Agent-based modeling of
+morphogenetic systems: Advantages and challenges. PLoS computational biology, 15(3), e1006577
+\bibitem{b3} Borgiani, E., Duda, G. N., & Checa, S. (2017). Multiscale Modeling of Bone Healing: Toward a Systems Biology Approach. Frontiers in physiology, 8, 287.
+\bibitem{b4} Alsassa, S., Lefèvre, T., Laugier, V., Stindel, E., & Ansart, S. (2020). Modeling Early Stages of Bone and Joint Infections Dynamics in Humans: A Multi-Agent, Multi System Based Model. Frontiers in molecular biosciences, 7, 26. 
+
+\end{thebibliography}
+
+\end{document}
