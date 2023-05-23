@@ -11,7 +11,7 @@ T = 26  # Number of time steps (days)
 B = np.zeros((M, N, T+1))  # 3D matrix representing the tissue culture well
 
 # Define the neighborhood
-neighborhood_size = 7  # Seven by seven grid surrounding each cell
+neighborhood_size = 3  # Two by Two grid surrounding each cell
 
 # Set initial conditions
 mean = 10  # Mean value for the number of initial clusters (you can adjust this value)
@@ -21,6 +21,9 @@ i = np.random.normal(mean, std)  # Number of initial clusters
 initial_sites = np.random.choice(M*N, int(i), replace=False)  # Randomly select initial sites
 B_flat = B.reshape(-1, T+1)  # Flatten the matrix B for easier indexing
 B_flat[initial_sites, 0] = np.random.uniform(0, 1, size=int(i))  # Set initial values for selected sites
+
+# Define mechanical tension
+mechanical_tension = np.random.uniform(0.5, 1, size=(M, N))  # Generate random mechanical tension values
 
 # Update mechanism
 for t in range(T):
@@ -33,7 +36,11 @@ for t in range(T):
             average_neighbor_value = np.mean(neighbor_values)
             
             if average_neighbor_value > current_value:
-                B[row, col, t+1] = current_value + np.random.uniform(0, 1)  # Increase bone formation
+                B[row, col, t+1] = B[row, col, t] + np.random.uniform(0, 1) # Increase bone formation
+            elif average_neighbor_value < current_value:
+                B[row, col, t+1] = B[row, col, t]
+            
+            B[row, col, t+1] *= mechanical_tension[row, col]  # Decrease bone formation with mechanical tension
 
 # Validate the model against experimental data
 # Perform the permutation test or other validation methods
@@ -43,11 +50,13 @@ for t in range(T):
 fig, ax = plt.subplots()
 plt.subplots_adjust(bottom=0.25)
 
-simulation_plot = ax.imshow(B[:, :, 0], cmap='hot', interpolation='nearest')
+simulation_plot = ax.imshow(B[:, :, 0], cmap='hot')
 plt.colorbar(simulation_plot)
 
+print(B[:, :, 6])
+
 # Create slider
-ax_slider = plt.axes([0.15, 0.1, 0.65, 0.03])
+ax_slider = plt.axes([0.25, 0.1, 0.65, 0.03])
 slider = Slider(ax_slider, 'Time Step (T)', 0, T, valinit=0, valstep=1)
 
 # Slider update function
