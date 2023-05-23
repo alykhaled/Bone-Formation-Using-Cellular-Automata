@@ -11,11 +11,11 @@ T = 26  # Number of time steps (days)
 B = np.zeros((M, N, T+1))  # 3D matrix representing the tissue culture well
 
 # Define the neighborhood
-neighborhood_size = 3  # Two by Two grid surrounding each cell
+neighborhood_size = 3  # Three by Three grid surrounding each cell
 
 # Set initial conditions
 mean = 10  # Mean value for the number of initial clusters (you can adjust this value)
-std = 1  # Standard deviation for the number of initial clusters (you can adjust this value)
+std = 3  # Standard deviation for the number of initial clusters (you can adjust this value)
 
 i = np.random.normal(mean, std)  # Number of initial clusters
 initial_sites = np.random.choice(M*N, int(i), replace=False)  # Randomly select initial sites
@@ -36,9 +36,9 @@ for t in range(T):
             average_neighbor_value = np.mean(neighbor_values)
             
             if average_neighbor_value > current_value:
-                B[row, col, t+1] = B[row, col, t] + np.random.uniform(0, 1) # Increase bone formation
+                B[row, col, t+1] = current_value + np.random.uniform(0, 1) # Increase bone formation
             elif average_neighbor_value < current_value:
-                B[row, col, t+1] = B[row, col, t]
+                B[row, col, t+1] = current_value
             
             B[row, col, t+1] *= mechanical_tension[row, col]  # Decrease bone formation with mechanical tension
 
