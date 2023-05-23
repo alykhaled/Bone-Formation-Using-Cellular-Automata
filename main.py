@@ -42,10 +42,7 @@ for t in range(T):
             
             B[row, col, t+1] *= mechanical_tension[row, col]  # Decrease bone formation with mechanical tension
 
-# Validate the model against experimental data
-# Perform the permutation test or other validation methods
-
-# Visualize the simulation results (optional)
+# Visualize the simulation results
 # Create initial plot
 fig, ax = plt.subplots()
 plt.subplots_adjust(bottom=0.25)
