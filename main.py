@@ -50,8 +50,6 @@ plt.subplots_adjust(bottom=0.25)
 simulation_plot = ax.imshow(B[:, :, 0], cmap='hot')
 plt.colorbar(simulation_plot)
 
-print(B[:, :, 6])
-
 # Create slider
 ax_slider = plt.axes([0.25, 0.1, 0.65, 0.03])
 slider = Slider(ax_slider, 'Time Step (T)', 0, T, valinit=0, valstep=1)
